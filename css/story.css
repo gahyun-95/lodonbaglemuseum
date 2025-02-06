@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+:root {
+
+  --main-font : "Noto Sans KR", sans-serif;
+  --sub-font : 'RixXladywatermelonR', serif;
+  --main-color : #DB9A23;
+}
+
+
+body {cursor: url(../images/main/cursor.png), pointer; overflow-x: hidden; font-family: var(--main-font); line-height: 1.5; font-size: 1.6rem; color: #000;}
+.inner {margin: 0 auto; max-width: 1640px; padding: 0 20px; }
+
+
+/* header */
+#header { position: absolute; left: 0; top: 0; width: 100%; padding: 30px 0 0; }
+#header .inner { max-width: 1800px; display: flex; justify-content: space-between; }
+#header h1 img {margin-left: 3vw; width:268px;}
+#header nav { margin: 0 auto 0 7vw; }
+#header .gnb {align-items: center; display: flex; }
+#header .gnb li a { display: block; padding: 20px 40px; font-family: var(--sub-font); font-size: 3rem;}
+#header .gnb li a img {padding-top: 10px;}
+
+
+#header .gnb > li {position: relative;}
+#header .gnb > li .depth2 {width: 700px; z-index: 3; position: absolute; display: flex; }
+#header .gnb > li::before {opacity: 0; transition: all 0.5s; content: ""; display: block; width: 8px ; height: 8px; border-radius: 50%; background: var(--main-color); position: absolute; left: calc(50% - 4px); top: -15px;} 
+#header .gnb > li:hover::before {opacity: 1; top: -5px;}
+#header .gnb > li .depth2 li a:hover {color: var(--main-color);} 
+
+#header .util .ham {padding-top: 70px; display: none; cursor: pointer; font-size: 0; width: 37px; height: 32px; background: url('../images/main/ham.png') no-repeat center / 100%}
+
+
+
+
+@media (max-width:1100px) {
+  #header .gnb {display: none;}
+  #header h1 a img{width: 200px;}
+  #header .util .ham {display: block;}
+  .main_banner .mb_video {display: none;}
+  .menu {margin: 0 auto;}
+}
+
+@media (max-width: 850px) {
+  #header .gnb {display: none;}
+  #header h1 a img{width: 100px;}
+}
+
+@media (max-width:430px) {
+  #header .gnb {display: none;}
+  #header h1 a img{width: 80px;}
+}
+
+
+
+
+
+/* visual */
+.visual {text-align: center; background: url('../images/sub/sub_bg.jpg') no-repeat;  width: 100%; height: 900px; max-width: 1920px; }
+
+.visual h2 {padding-top: 220px; font-weight: 400; font-family: var(--sub-font); font-size: 12rem; color: var(--main-color);}
+.visual p {font-weight: 400; font-family: var(--sub-font); font-size: 2.5rem;}
+
+
+
+/* intro */
+.intro {padding-bottom: 150px; border-bottom: solid 1px #888; text-align: center; padding-top: 250px;}
+ .intro .img_box {position: relative;}
+.intro img { filter: brightness(0.5); } 
+.intro .txt_box {color: #fff; font-size: 2.7rem; position: absolute; top: 65%; left: 33%;}
+
+
+
+/* story */
+.story {position: relative; background: url('../images/sub/story/sub_footbg.jpg') no-repeat center;  padding-bottom: 400px;}
+.story h2 {padding: 30px 380px 30px 0; font-weight: 400; font-family: var(--sub-font); font-size: 5rem; color: var(--main-color); text-align: right;}
+
+.bubble1 {position: relative;}
+.story .bubble1 img { margin: 50px auto; display: block; width: 500px; height: 500px;}
+.bubble1 p {position: absolute; text-align: center; top: 33%; left: 43%;}
+
+
+.dog_bg {position: relative;}
+.dog_bg img {width: 250px; height: 250px; display: block; position: absolute; bottom: 60%; left: 25%;} 
+
+.story .flower2 img {width: 200px; height: 200px; position: absolute; display: block; top: -58%; left: 25%;}
+
+
+.story .bubble2 .flower3 img {width: 200px; height: 200px; position: absolute; display: block; top: 40%; right: -35%;}
+
+
+.story .bubble2 h2 {padding: 400px 0 200px 380px;  text-align: left;}
+.story .bubble2 {position: relative; padding-bottom: 150px;}
+.story .bubble2 img {position: absolute; left: 18%; top: 50%; margin: 50px auto; display: block; width: 600px; height: 600px;}
+.story .bubble2 .first h5 {font-size: 1.8rem; padding-bottom: 10px;}
+.story .bubble2 .first {position: absolute;  top: 75%; left: 25%;}
+.story .bubble2 .second h5 {font-size: 1.8rem; padding-bottom: 10px;}
+.story .bubble2 .second { position: absolute;  top: 93%; left: 25%;}
+
+.bubble2 .dog_bg2 {position: relative;}
+.bubble2 .dog_bg2 img {width: 300px; height: 300px; display: block; position: absolute; bottom: 0; left: 55%;} 
+
+ 
+
+
+
+/* outro */
+.outro {padding: 150px 0; text-align: center;}
+ .outro .out_img_box {position: relative;}
+.out_img_box img { filter: brightness(0.5); } 
+.outro .out_txt_box { color: #fff; position: absolute; top: 30%; left: 37%;}
+.outro .out_txt_box h3 {padding-bottom: 50px; font-weight: 400; text-align: center; font-size: 3rem;}
+.outro .out_txt_box p {font-size: 1.5rem;}
+
+
+
+/* footer */
+#footer {color: #fff; text-align: center; padding: 80px; background: url('../images/main/footer.png') no-repeat; background-size: cover;}
+#footer h3 {font-weight: 400; font-family: var(--sub-font); font-size: 2rem; padding-bottom: 25px;}
+#footer address {font-size: 1.3rem; padding-bottom: 10px;}
+#footer .sns {padding-left: 25px; display: inline-block; text-align: center; background: url('../images/main/instagram.png') no-repeat; font-size: 1.3rem; padding-bottom: 20px;}
+#footer .copy {font-size: 1rem;}
